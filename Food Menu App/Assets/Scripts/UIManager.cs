@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour {
     public GameObject UserInfo;
     public GameObject UserInfoMenu;
     public GameObject UserInfoChoose;
+    private string saveInfoUser = "sfu";
 
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     // Method: Start
@@ -54,8 +55,9 @@ public class UIManager : MonoBehaviour {
         {
             informationCards.sprite = cardsSprites[index];
             textCard.sprite = textSprites[index];
+            PlayerPrefs.GetString(saveInfoUser, "InfoUserSave");
             ToogleInformationIcon(true);
-            StartCoroutine(UserInfoInstruction());
+            EnableInfo();
         }
         else
         {
@@ -124,9 +126,15 @@ public class UIManager : MonoBehaviour {
         informationIcon.SetActive(state);
     }
 
-    IEnumerator UserInfoInstruction()
+    private void  EnableInfo()
     {
+        PlayerPrefs.SetString(saveInfoUser, "InfoUserSave");
         UserInfo.SetActive(true);
+        StartCoroutine(EnableInfoTime());
+    }
+
+    IEnumerator EnableInfoTime()
+    {
         yield return new WaitForSeconds(2f);
         UserInfo.SetActive(false);
     }
