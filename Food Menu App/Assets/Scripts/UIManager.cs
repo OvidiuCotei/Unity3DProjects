@@ -98,6 +98,12 @@ public class UIManager : MonoBehaviour {
         ToogleInformationIcon(false);
     }
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: ToogleInformtionIcon
+    // Desc: Folosita pentru activarea sau dezactivarea conturului
+    //       de albastru care indica utilizatorului daca imaginea
+    //       este selectat sau nu.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     private void ToogleInformationIcon(bool state)
     {
         informationIcon.SetActive(state);
