@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 // Class: UIManager
@@ -67,6 +68,16 @@ public class UIManager : MonoBehaviour {
     public void ShowInformation()
     {
         informationPanel.SetActive(true);
+        soundManager.SendMessage("PlayClick"); // Apeleaza functia PlayClick din scriptul SoundManager.
+    }
+
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: MainMenu
+    // Desc: Folosita pentru accesarea meniului aplicatiei.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    public void MainMenu()
+    {
+        SceneManager.LoadSceneAsync(0);
         soundManager.SendMessage("PlayClick"); // Apeleaza functia PlayClick din scriptul SoundManager.
     }
 
