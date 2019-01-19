@@ -25,6 +25,11 @@ public class MenuManager : MonoBehaviour {
         StartCoroutine(LoadAsynchronously(sceneIndex));
     }
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: ExitApp
+    // Desc: Folosita pentru butonul de iesire din aplicatie, cu
+    //       ajutorul caruia utilizatorul poate parasi aplicatia.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     public void ExitApp()
     {
         Application.Quit();
