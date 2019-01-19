@@ -58,6 +58,12 @@ public class UIManager : MonoBehaviour {
         }
     }
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: ShowInformation
+    // Desc: Folosita pentru afisarea ferestrei de informatii
+    // despre meniu atunci cand utilizatorul apasa pe butonul
+    // de informatii.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     public void ShowInformation()
     {
         informationPanel.SetActive(true);
