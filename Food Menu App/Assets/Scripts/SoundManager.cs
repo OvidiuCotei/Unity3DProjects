@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-// Class: RotateModels
+// Class: SoundManager
 // Desc: Contine toate metodele pentru functionalitatea
-//       sistemului de rotire a meniului vizualizat in 3D.
-//       Acesta se roteste la procesului de swipe pe ecranul
-//       telefonului.
+//       sistemului de sunet, astfel incat atunci cand 
+//       utiliatorul da click pe un buton acesta va emite un
+//       sunet.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 public class SoundManager : MonoBehaviour {
 
