@@ -35,6 +35,16 @@ public class MenuManager : MonoBehaviour {
         Application.Quit();
     }
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: LoadAsynchronously
+    // Desc: Are capaciatea de a intrerupe executarea si a reveni
+    //       astfel icat sa continue de unde a ramas.
+    //       In acest caz metoda are rolul de a se executa 
+    //       procesul incarcare a scenei aplicatiei astfel incat
+    //       operatia asincrona scena se va reincarca doar atunci
+    //       cand este terminata si toate elementele din scena
+    //       sunt incarcate.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     IEnumerator LoadAsynchronously(int sceneIndex)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
