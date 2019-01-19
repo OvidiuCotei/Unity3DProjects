@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+// Class: UIManager
+// Desc: Contine toate metodele pentru functionalitatea
+//       sistemului de navgare in meniul aplicatiri.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 public class UIManager : MonoBehaviour {
 
     public GameObject modelsManager;
