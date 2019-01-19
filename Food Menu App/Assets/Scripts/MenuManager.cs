@@ -12,6 +12,7 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour {
 
     public GameObject sliderObj;
+    public GameObject soundManager;
     public Slider slider;
     public Text progressText;
 
@@ -22,6 +23,7 @@ public class MenuManager : MonoBehaviour {
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     public void ChooseMenu(int sceneIndex)
     {
+        soundManager.SendMessage("PlayClick");
         StartCoroutine(LoadAsynchronously(sceneIndex));
     }
 
@@ -32,6 +34,7 @@ public class MenuManager : MonoBehaviour {
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     public void ExitApp()
     {
+        soundManager.SendMessage("PlayClick");
         Application.Quit();
     }
 

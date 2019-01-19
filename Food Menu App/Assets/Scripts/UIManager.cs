@@ -22,10 +22,6 @@ public class UIManager : MonoBehaviour {
     public Image[] sliderImages;
     public Image informationCards;
     public Image textCard;
-    public GameObject UserInfo;
-    public GameObject UserInfoChoose;
-    private string saveInfoUser = "sfu";
-    private string saveInfoUserChoose = "sfuc";
 
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     // Method: Start
@@ -122,10 +118,5 @@ public class UIManager : MonoBehaviour {
     private void ToogleInformationIcon(bool state)
     {
         informationIcon.SetActive(state);
-    }
-
-    private void  EnableInfo()
-    {
-        UserInfo.SetActive(true);
     }
 }
