@@ -77,8 +77,8 @@ public class UIManager : MonoBehaviour {
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     public void MainMenu()
     {
-        SceneManager.LoadSceneAsync(0);
         soundManager.SendMessage("PlayClick"); // Apeleaza functia PlayClick din scriptul SoundManager.
+        SceneManager.LoadSceneAsync(0);
     }
 
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
