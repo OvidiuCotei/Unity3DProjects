@@ -70,6 +70,11 @@ public class UIManager : MonoBehaviour {
         soundManager.SendMessage("PlayClick");
     }
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: HideInformationPanel
+    // Desc: Folosita pentru inchiderea feresteri de informatii
+    //       a meniului.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     public void HideInformationPanel()
     {
         informationPanel.SetActive(false);
