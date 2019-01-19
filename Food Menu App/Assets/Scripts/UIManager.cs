@@ -21,14 +21,24 @@ public class UIManager : MonoBehaviour {
     public Image[] sliderImages;
     public Image informationCards;
     public Image textCard;
-   
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: Start
+    // Desc: Folosita pentru initializarea referintelor atunci
+    //       cand aplicatia porneste.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     private void Start()
     {
         DeselectAll();
         ToogleInformationIcon(false);
     }
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: SetModel
+    // Desc: Folosita pentru apelarea functiti PlayClick din 
+    //       scriptul SoundManager. Dezactivarea tuturor 
+    //       imaginilor.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     public void SelectModel(int index)
     {
         soundManager.SendMessage("PlayClick");
