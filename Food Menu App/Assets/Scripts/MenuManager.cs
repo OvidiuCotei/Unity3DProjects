@@ -4,12 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+// Class: MenuManager
+// Desc: Contine toate metodele pentru functionalitatea
+//       meniului aplicatiei.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 public class MenuManager : MonoBehaviour {
 
     public GameObject sliderObj;
     public Slider slider;
     public Text progressText;
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: ChooseMenu
+    // Desc: Folosita pentru butonul de alegere meniu, care va duce
+    //       utilizatorul spre scena cu meniurile aplicatiei.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     public void ChooseMenu(int sceneIndex)
     {
         StartCoroutine(LoadAsynchronously(sceneIndex));
