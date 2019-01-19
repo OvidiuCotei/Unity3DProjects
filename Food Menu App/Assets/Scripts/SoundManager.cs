@@ -13,11 +13,21 @@ public class SoundManager : MonoBehaviour {
 
     private AudioSource AS;
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: Start
+    // Desc: Folosita pentru initializarea referintelor atunci
+    //       cand aplicatia porneste.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     private void Start()
     {
-        AS =  this.GetComponent<AudioSource>();
+        AS =  this.GetComponent<AudioSource>(); // Acesam componenta Audio Source
     }
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: PlayClick
+    // Desc: Folosita pentru pornirea sunetului la apelarea
+    // evenimentului de OnClick asupra butoanelor.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     public void PlayClick()
     {
         AS.Play();
