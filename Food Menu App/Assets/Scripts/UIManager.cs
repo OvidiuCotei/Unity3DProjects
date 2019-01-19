@@ -22,6 +22,9 @@ public class UIManager : MonoBehaviour {
     public Image[] sliderImages;
     public Image informationCards;
     public Image textCard;
+    public GameObject userInfoMenu;
+    public GameObject userInfoChoose;
+    public GameObject userInfoMainMenu;
 
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     // Method: Start
@@ -32,6 +35,7 @@ public class UIManager : MonoBehaviour {
     {
         DeselectAll();
         ToogleInformationIcon(false);
+        StartCoroutine(ShowHideInformationUserChoose());
     }
 
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
@@ -52,6 +56,7 @@ public class UIManager : MonoBehaviour {
             informationCards.sprite = cardsSprites[index];
             textCard.sprite = textSprites[index];
             ToogleInformationIcon(true);
+            StartCoroutine(ShowHideInformationUserInfo());
         }
         else
         {
@@ -118,5 +123,22 @@ public class UIManager : MonoBehaviour {
     private void ToogleInformationIcon(bool state)
     {
         informationIcon.SetActive(state);
+    }
+
+    IEnumerator ShowHideInformationUserChoose()
+    {
+        userInfoChoose.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        userInfoChoose.SetActive(false);
+        userInfoMainMenu.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        userInfoMainMenu.SetActive(false);
+    }
+
+    IEnumerator ShowHideInformationUserInfo()
+    {
+        userInfoMenu.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        userInfoMenu.SetActive(false);
     }
 }
