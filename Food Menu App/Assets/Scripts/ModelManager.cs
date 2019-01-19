@@ -36,6 +36,12 @@ public class ModelManager : MonoBehaviour {
         }
     }
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: SetModel
+    // Desc: Folosita pentru activarea modelelor din array-ul models
+    //       pe baza unui index predefinit in evenimentul OnClick
+    //       din Inspector.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     private void SetModel(int index)
     {
         // Dezacivare celelalte modele inaite de activarea unui model
