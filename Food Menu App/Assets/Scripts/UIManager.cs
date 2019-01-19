@@ -125,6 +125,14 @@ public class UIManager : MonoBehaviour {
         informationIcon.SetActive(state);
     }
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: ShowHideInformationUserChoose
+    // Desc: Are capaciatea de a intrerupe executarea si a reveni
+    //       astfel icat sa continue de unde a ramas.
+    //       In acest caz metoda are rolul de a se executa 
+    //       procesul activare a instructiunilor  si dezactivare
+    //       ale acestora dupa un interval de timp.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     IEnumerator ShowHideInformationUserChoose()
     {
         userInfoChoose.SetActive(true);
@@ -135,6 +143,14 @@ public class UIManager : MonoBehaviour {
         userInfoMainMenu.SetActive(false);
     }
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: ShowHideInformationUserInfo
+    // Desc: Are capaciatea de a intrerupe executarea si a reveni
+    //       astfel icat sa continue de unde a ramas.
+    //       In acest caz metoda are rolul de a se executa 
+    //       procesul activare a instructiunilor  si dezactivare
+    //       ale acestora dupa un interval de timp.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     IEnumerator ShowHideInformationUserInfo()
     {
         userInfoMenu.SetActive(true);
