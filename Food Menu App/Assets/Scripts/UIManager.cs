@@ -81,6 +81,14 @@ public class UIManager : MonoBehaviour {
         soundManager.SendMessage("PlayClick");   
     }
 
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+    // Method: DeselectAll
+    // Desc: Folosita pentru dezactivarea imaginilor din
+    //       contentul cu meniuri, astfel incat atunci cand
+    //       utilizatorul selecteaza alt meniu, celalalte meniuri
+    //       sunt dezactivate si ramane activat foar meniul selectat
+    //      care este incadrat cu un contur albastru.
+    // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     private void DeselectAll()
     {
         for(int i = 0; i < sliderImages.Length; i++)
