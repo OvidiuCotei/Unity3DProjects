@@ -23,9 +23,9 @@ public class UIManager : MonoBehaviour {
     public Image informationCards;
     public Image textCard;
     public GameObject UserInfo;
-    public GameObject UserInfoMenu;
     public GameObject UserInfoChoose;
     private string saveInfoUser = "sfu";
+    private string saveInfoUserChoose = "sfuc";
 
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     // Method: Start
@@ -36,6 +36,8 @@ public class UIManager : MonoBehaviour {
     {
         DeselectAll();
         ToogleInformationIcon(false);
+        PlayerPrefs.GetString(saveInfoUser, "InfoUserSave");
+        PlayerPrefs.GetString(saveInfoUserChoose, "InfoUserSaveChose");
     }
 
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
@@ -48,6 +50,7 @@ public class UIManager : MonoBehaviour {
     {
         soundManager.SendMessage("PlayClick");
         modelsManager.SendMessage("SetModel", index);
+        PlayerPrefs.GetString(saveInfoUserChoose, "InfoUserSaveChose");
         // Setam toate imaginile sa fie selectate
         DeselectAll();
         sliderImages[index].sprite = selectedSprites[index];
@@ -57,7 +60,7 @@ public class UIManager : MonoBehaviour {
             textCard.sprite = textSprites[index];
             PlayerPrefs.GetString(saveInfoUser, "InfoUserSave");
             ToogleInformationIcon(true);
-            EnableInfo();
+            //EnableInfo();
         }
         else
         {
@@ -128,14 +131,39 @@ public class UIManager : MonoBehaviour {
 
     private void  EnableInfo()
     {
-        PlayerPrefs.SetString(saveInfoUser, "InfoUserSave");
-        UserInfo.SetActive(true);
-        StartCoroutine(EnableInfoTime());
+        if (saveInfoUser != "sfu")
+        {
+            UserInfo.SetActive(true);
+        }
+        else
+        {
+            StartCoroutine(DesableInfoTime());
+        }
+
+        if(saveInfoUserChoose != "sfuc")
+        {
+            UserInfoChoose.SetActive(true);
+        }
+        else
+        {
+            StartCoroutine(DesableInfoTime());
+        }
     }
 
-    IEnumerator EnableInfoTime()
+    IEnumerator DesableInfoTime()
     {
-        yield return new WaitForSeconds(2f);
-        UserInfo.SetActive(false);
+        if (saveInfoUser == "sfu")
+        {
+            PlayerPrefs.SetString(saveInfoUser, "InfoUserSave");
+            yield return new WaitForSeconds(2f);
+            UserInfo.SetActive(false);
+        }
+
+        if(saveInfoUserChoose == "sfuc")
+        {
+            PlayerPrefs.SetString(saveInfoUserChoose, "InfoUserSaveChose");
+            yield return new WaitForSeconds(2f);
+            UserInfoChoose.SetActive(false);
+        }
     }
 }
