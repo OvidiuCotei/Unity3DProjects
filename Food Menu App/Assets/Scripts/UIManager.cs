@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviour {
     public void ShowInformation()
     {
         informationPanel.SetActive(true);
-        soundManager.SendMessage("PlayClick");
+        soundManager.SendMessage("PlayClick"); // Apeleaza functia PlayClick din scriptul SoundManager.
     }
 
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
