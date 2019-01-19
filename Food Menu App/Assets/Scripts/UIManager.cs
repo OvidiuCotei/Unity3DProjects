@@ -36,8 +36,6 @@ public class UIManager : MonoBehaviour {
     {
         DeselectAll();
         ToogleInformationIcon(false);
-        PlayerPrefs.GetString(saveInfoUser, "InfoUserSave");
-        PlayerPrefs.GetString(saveInfoUserChoose, "InfoUserSaveChose");
     }
 
     // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
@@ -50,7 +48,6 @@ public class UIManager : MonoBehaviour {
     {
         soundManager.SendMessage("PlayClick");
         modelsManager.SendMessage("SetModel", index);
-        PlayerPrefs.GetString(saveInfoUserChoose, "InfoUserSaveChose");
         // Setam toate imaginile sa fie selectate
         DeselectAll();
         sliderImages[index].sprite = selectedSprites[index];
@@ -58,9 +55,7 @@ public class UIManager : MonoBehaviour {
         {
             informationCards.sprite = cardsSprites[index];
             textCard.sprite = textSprites[index];
-            PlayerPrefs.GetString(saveInfoUser, "InfoUserSave");
             ToogleInformationIcon(true);
-            //EnableInfo();
         }
         else
         {
@@ -131,39 +126,6 @@ public class UIManager : MonoBehaviour {
 
     private void  EnableInfo()
     {
-        if (saveInfoUser != "sfu")
-        {
-            UserInfo.SetActive(true);
-        }
-        else
-        {
-            StartCoroutine(DesableInfoTime());
-        }
-
-        if(saveInfoUserChoose != "sfuc")
-        {
-            UserInfoChoose.SetActive(true);
-        }
-        else
-        {
-            StartCoroutine(DesableInfoTime());
-        }
-    }
-
-    IEnumerator DesableInfoTime()
-    {
-        if (saveInfoUser == "sfu")
-        {
-            PlayerPrefs.SetString(saveInfoUser, "InfoUserSave");
-            yield return new WaitForSeconds(2f);
-            UserInfo.SetActive(false);
-        }
-
-        if(saveInfoUserChoose == "sfuc")
-        {
-            PlayerPrefs.SetString(saveInfoUserChoose, "InfoUserSaveChose");
-            yield return new WaitForSeconds(2f);
-            UserInfoChoose.SetActive(false);
-        }
+        UserInfo.SetActive(true);
     }
 }
